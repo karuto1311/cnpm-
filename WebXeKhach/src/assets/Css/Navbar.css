@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ff5722;
+  padding: 10px;
+  color: white;
+  height: 150px;
+}
+
+.logo {
+margin-right: 150px;
+width: 150px;
+height: 150px;
+}
+
+
+
+.navbar-left {
+  display: flex;
+  list-style: none;
+  margin-top: 50px;
+}
+
+.navbar-left li {
+  margin-right: 20px;
+}
+
+.navbar-left li a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-5%);
+}
+
+.logo {
+  width: 150px;
+  height:150px;
+}
+
+
+
+.loginbtn {
+  margin-right: 15px;
+}
+.loginbtn button {
+  margin-top: 50px;
+  margin-left: 10px;
+  padding: 5px 10px;
+  
+}
+.app-download button {
+  margin: 0 5px;
+}
+
+
+

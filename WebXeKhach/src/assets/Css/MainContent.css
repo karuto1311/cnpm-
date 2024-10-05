@@ -1,0 +1,56 @@
+.main-content {
+  padding: 20px;
+  height: 500px;
+}
+
+.search-section {
+  margin: 20px 0;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select { /* Thêm cả select vào cùng với input */
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  border: 1px solid #ccc; /* Đường viền cho select */
+  border-radius: 4px; /* Làm góc bo tròn */
+  appearance: none; /* Xóa icon mặc định của trình duyệt */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.input-group select {
+  background-color: white; /* Đặt nền trắng cho select */
+}
+
+.search-button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 1px 20px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #e05a00;
+}
+
+.promotion-section, .popular-routes-section {
+  margin-top: 40px;
+}
