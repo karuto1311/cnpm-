@@ -68,12 +68,12 @@ function MainContent() {
 
       <section className="promotion-section">
         <h2>Khuyến mãi nổi bật</h2>
-        {/* Bạn có thể thêm các phần nội dung quảng cáo */}
+        {/* thêm các phần nội dung quảng cáo */}
       </section>
 
       <section className="popular-routes-section">
         <h2>Tuyến phổ biến</h2>
-        {/* Bạn có thể thêm các tuyến xe phổ biến */}
+        {/* thêm các tuyến xe phổ biến */}
       </section>
     </div>
   );
