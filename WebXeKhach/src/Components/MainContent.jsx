@@ -172,7 +172,7 @@ function MainContent() {
 
       <section className="promotion-section">
         <h2>Khuyến mãi nổi bật</h2>
-        <p>QC</p>
+        <p>QCCCCC</p>
       </section>
 
       <section className="popular-routes-section">
