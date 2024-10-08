@@ -37,7 +37,7 @@ height: 150px;
 .logo-container {
   position: absolute;
   left: 50%;
-  transform: translateX(-5%);
+  transform: translateX(-10%);
 }
 
 .logo {
