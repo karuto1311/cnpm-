@@ -1,49 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 import '../assets/Css/MainContent.css';
+import { city, randomTrips } from '../data/tripData'; 
+
+// Import ảnh
+import slideshow1 from '../assets/slideshow1.jpg';
+import slideshow2 from '../assets/slideshow2.jpg';
+import slideshow3 from '../assets/slideshow3.jpg';
 
 function MainContent() {
-  const city = [
-    'An Giang',
-    'Bà Rịa - Vũng Tàu',
-    'Bạc Liêu',
-    'Bến Tre',
-    'Bình Dương',
-    'Bình Phước',
-    'Cà Mau',
-    'Cần Thơ',
-    'Đồng Nai',
-    'Đồng Tháp',
-    'Hậu Giang',
-    'Kiên Giang',
-    'Long An',
-    'Sóc Trăng',
-    'Tây Ninh',
-    'Tiền Giang',
-    'Trà Vinh',
-    'Vĩnh Long',
-    'TP. Hồ Chí Minh'
-  ];
-
-  const randomTrips = [
-    { departure: 'An Giang', destination: 'TP. Hồ Chí Minh', date: '2024-10-15' },
-    { departure: 'Bến Tre', destination: 'Cà Mau', date: '2024-10-16' },
-    { departure: 'Long An', destination: 'Đồng Nai', date: '2024-10-17' },
-    { departure: 'Bình Dương', destination: 'Tiền Giang', date: '2024-10-18' },
-    { departure: 'Hậu Giang', destination: 'Sóc Trăng', date: '2024-10-19' },
-    { departure: 'Đồng Nai', destination: 'Bạc Liêu', date: '2024-10-20' },
-    { departure: 'Cần Thơ', destination: 'Trà Vinh', date: '2024-10-21' },
-    { departure: 'Tây Ninh', destination: 'Kiên Giang', date: '2024-10-22' },
-    { departure: 'Bà Rịa - Vũng Tàu', destination: 'An Giang', date: '2024-10-23' },
-    { departure: 'Tiền Giang', destination: 'Vĩnh Long', date: '2024-10-24' },
-    { departure: 'TP. Hồ Chí Minh', destination: 'Bến Tre', date: '2024-10-25' }
-  ];
-
   const [departure, setDeparture] = useState('');
   const [destination, setDestination] = useState('');
   const [date, setDate] = useState('');
   const [filteredTrips, setFilteredTrips] = useState([]);
   const [randomData, setRandomData] = useState([]);
-  const [popularRoutes, setPopularRoutes] = useState([]); // State cho tuyến phổ biến
+  const [popularRoutes, setPopularRoutes] = useState([]);
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -76,6 +50,18 @@ function MainContent() {
     }
 
     setFilteredTrips(results);
+  };
+
+  const images = [slideshow1, slideshow2, slideshow3];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
   };
 
   return (
@@ -172,7 +158,13 @@ function MainContent() {
 
       <section className="promotion-section">
         <h2>Khuyến mãi nổi bật</h2>
-        <p>QCCCCC</p>
+        <Slider {...settings}>
+          {images.map((image, index) => (
+            <div key={index}>
+              <img src={image} alt={`slide-${index}`} className="slideshow-image" />
+            </div>
+          ))}
+        </Slider>
       </section>
 
       <section className="popular-routes-section">

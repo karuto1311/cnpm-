@@ -24,19 +24,19 @@
 }
 
 .input-group input,
-.input-group select { /* Thêm cả select vào cùng với input */
+.input-group select {
   padding: 10px;
   font-size: 16px;
   width: 200px;
-  border: 1px solid #ccc; /* Đường viền cho select */
-  border-radius: 4px; /* Làm góc bo tròn */
-  appearance: none; /* Xóa icon mặc định của trình duyệt */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
 .input-group select {
-  background-color: white; /* Đặt nền trắng cho select */
+  background-color: white;
 }
 
 .search-button {
@@ -55,18 +55,17 @@
   margin-top: 40px;
 }
 
-/* Thêm CSS cho bảng */
 .trip-table-section,
 .search-results-section {
   margin-top: 40px;
   display: flex;
-  justify-content: center; /* Căn giữa bảng */
+  justify-content: center;
 }
 
 table {
-  width: 80%; /* Đặt kích thước bảng là 80% chiều rộng của container */
+  width: 80%;
   border-collapse: collapse;
-  margin: 20px auto; /* Căn bảng ở giữa với margin tự động */
+  margin: 20px auto;
 }
 
 table th, table td {
@@ -76,49 +75,59 @@ table th, table td {
 }
 
 table th {
-  background-color: #f5f5f5; /* Nền cho tiêu đề */
+  background-color: #f5f5f5;
   font-weight: bold;
 }
 
 table tbody tr:nth-child(odd) {
-  background-color: #f9f9f9; /* Màu nền xen kẽ cho các dòng */
+  background-color: #f9f9f9;
 }
 
 table tbody tr:hover {
-  background-color: #e0e0e0; /* Màu nền khi hover trên dòng */
+  background-color: #e0e0e0;
 }
 
-/* Phần search-results-section và bảng kết quả tìm kiếm */
 .search-results-section {
   margin-top: 40px;
-  text-align: center; /* Căn giữa tiêu đề */
+  text-align: center;
   display: inline;
 }
 
 .search-results-section h2 {
-  font-size: 24px; /* Kích thước chữ */
-  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
-  text-align: center; /* Căn giữa */
-  color: #333; /* Màu chữ */
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
 }
-
 
 .search-results-section table {
-  width: 80%; /* Đặt kích thước bảng là 80% chiều rộng */
-  margin: 0 auto; /* Căn giữa bảng */
+  width: 80%;
+  margin: 0 auto;
 }
+
 .popular-routes {
   display: flex;
-  justify-content: space-around; /* Căn giữa các card */
+  justify-content: space-around;
   margin-top: 20px;
 }
 
 .card {
-  background-color: #f9f9f9; /* Màu nền của card */
-  border: 1px solid #ccc; /* Đường viền của card */
-  border-radius: 8px; /* Bo góc cho card */
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   padding: 15px;
-  width: 200px; /* Chiều rộng card */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Đổ bóng cho card */
-  text-align: center; /* Căn giữa nội dung */
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 550px;
+  border-radius: 10px;
+}
+
+.slideshow-image img {
+  width: 550px;
+  height: 550px;
 }
