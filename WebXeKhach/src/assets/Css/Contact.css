@@ -1,0 +1,34 @@
+.contact-content {
+    height:wrap;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.info-content {
+    height: auto;
+    width: 40%;
+    text-align: left;
+    padding: 10px;
+}
+.form-content {
+    height: auto;
+    width: 60%;
+    padding: 10px;
+    background-color: gainsboro;
+}
+.form-content input {
+    padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 20px;
+}
+.form-field-double {
+display: flex;
+flex-direction: row;
+align-content: center;
+}

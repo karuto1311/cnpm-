@@ -11,7 +11,8 @@ function Navbar() {
         <li><Link to="/schedule">Lịch trình</Link></li>
         <li><a href="/">Tra cứu vé</a></li>
         <li><a href="/">Hóa đơn</a></li>
-        <li><a href="/">Về chúng tôi</a></li>
+        <li><Link to="/contact">Liên hệ</Link></li>
+        <li><a href="/about">Về chúng tôi</a></li>
       </ul>
       <div className="logo-container">
         <img src={logo} alt="Xe Dai Nam" className="logo" />
