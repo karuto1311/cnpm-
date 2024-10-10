@@ -6,10 +6,12 @@ import "slick-carousel/slick/slick-theme.css";
 import '../assets/Css/MainContent.css';
 import { city, randomTrips } from '../data/tripData'; 
 
-// Import ảnh
 import slideshow1 from '../assets/slideshow1.jpg';
 import slideshow2 from '../assets/slideshow2.jpg';
 import slideshow3 from '../assets/slideshow3.jpg';
+import bgimage1 from '../assets/bgimage1.jpg';
+import bgimage2 from '../assets/bgimage2.jpg';
+import bgimage3 from '../assets/bgimage3.jpg';
 
 function MainContent() {
   const [departure, setDeparture] = useState('');
@@ -21,13 +23,25 @@ function MainContent() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    // Chọn ngẫu nhiên từ 5-8 chuyến xe để hiển thị khi trang được tải
     const shuffledData = [...randomTrips].sort(() => 0.5 - Math.random());
     setRandomData(shuffledData.slice(0, Math.floor(Math.random() * 4) + 5));
-    
-    // Chọn 3 chuyến xe ngẫu nhiên cho tuyến phổ biến
-    const popularShuffled = shuffledData.slice(0, 3);
-    setPopularRoutes(popularShuffled);
+
+    // Group popular routes by departure city
+    const groupedRoutes = shuffledData.reduce((acc, trip) => {
+      if (!acc[trip.departure]) {
+        acc[trip.departure] = [];
+      }
+      acc[trip.departure].push(trip);
+      return acc;
+    }, {});
+
+    // Get only the first three departure cities for popular routes
+    const popular = Object.keys(groupedRoutes).slice(0, 3).map(city => ({
+      city,
+      trips: groupedRoutes[city].slice(0, 3) // Get the first three trips for each city
+    }));
+
+    setPopularRoutes(popular);
   }, []);
 
   const handleSearch = () => {
@@ -43,16 +57,12 @@ function MainContent() {
       (date === '' || trip.date === date)
     );
 
-    if (results.length === 0) {
-      setError('Không tìm thấy chuyến xe nào phù hợp.');
-    } else {
-      setError('');
-    }
-
+    setError(results.length === 0 ? 'Không tìm thấy chuyến xe nào phù hợp.' : '');
     setFilteredTrips(results);
   };
 
   const images = [slideshow1, slideshow2, slideshow3];
+  const shuffledImages = [bgimage1, bgimage2, bgimage3].sort(() => 0.5 - Math.random()).slice(0, 3); // Add shuffled images for popular routes
 
   const settings = {
     dots: true,
@@ -75,6 +85,7 @@ function MainContent() {
               id="departure" 
               value={departure} 
               onChange={(e) => setDeparture(e.target.value)}
+              aria-label="Điểm đi"
             >
               <option value="">Chọn điểm đi</option>
               {city.map((city, index) => (
@@ -88,6 +99,7 @@ function MainContent() {
               id="destination" 
               value={destination} 
               onChange={(e) => setDestination(e.target.value)}
+              aria-label="Điểm đến"
             >
               <option value="">Chọn điểm đến</option>
               {city.map((city, index) => (
@@ -102,12 +114,11 @@ function MainContent() {
               id="date" 
               value={date} 
               onChange={(e) => setDate(e.target.value)}
+              aria-label="Ngày đi"
             />
           </div>
           <button className="search-button" onClick={handleSearch}>Tìm chuyến xe</button>
         </div>
-
-        {/* Hiển thị thông báo lỗi nếu có */}
         {error && <div className="error-message">{error}</div>}
       </section>
 
@@ -133,28 +144,28 @@ function MainContent() {
       </section>
 
       {filteredTrips.length > 0 && (
-      <section className="search-results-section">
-        <h2>Kết quả tìm kiếm</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Điểm đi</th>
-              <th>Điểm đến</th>
-              <th>Ngày đi</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredTrips.map((trip, index) => (
-              <tr key={index}>
-                <td>{trip.departure}</td>
-                <td>{trip.destination}</td>
-                <td>{trip.date}</td>
+        <section className="search-results-section">
+          <h2>Kết quả tìm kiếm</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Điểm đi</th>
+                <th>Điểm đến</th>
+                <th>Ngày đi</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
-    )}
+            </thead>
+            <tbody>
+              {filteredTrips.map((trip, index) => (
+                <tr key={index}>
+                  <td>{trip.departure}</td>
+                  <td>{trip.destination}</td>
+                  <td>{trip.date}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+      )}
 
       <section className="promotion-section">
         <h2>Khuyến mãi nổi bật</h2>
@@ -170,11 +181,28 @@ function MainContent() {
       <section className="popular-routes-section">
         <h2>Tuyến phổ biến</h2>
         <div className="popular-routes">
-          {popularRoutes.map((trip, index) => (
-            <div className="card" key={index}>
-              <h3>Điểm đi: {trip.departure}</h3>
-              <p>Điểm đến: {trip.destination}</p>
-              <p>Ngày đi: {trip.date}</p>
+          {popularRoutes.map((route, index) => (
+            <div className="card" key={index} style={{ backgroundImage: `url(${shuffledImages[index]})`, backgroundSize: 'cover' }}>
+              <div className="route-title">
+                <h3>Tuyến đi từ: {route.city}</h3>
+              </div>
+              <div className="route-info">
+                {route.trips.map((trip, tripIndex) => (
+                  <p key={tripIndex}>
+                    Điểm đến: {trip.destination} - Ngày đi: {trip.date}
+                  </p>
+                ))}
+                {route.trips.map((trip, tripIndex) => (
+                  <p key={tripIndex}>
+                    Điểm đến: {trip.destination} - Ngày đi: {trip.date}
+                  </p>
+                ))}
+                {route.trips.map((trip, tripIndex) => (
+                  <p key={tripIndex}>
+                    Điểm đến: {trip.destination} - Ngày đi: {trip.date}
+                  </p>
+                ))}
+              </div>
             </div>
           ))}
         </div>

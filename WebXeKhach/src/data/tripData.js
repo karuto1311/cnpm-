@@ -1,3 +1,5 @@
+//TripData.js
+
 export const city = [
     'An Giang',
     'Bà Rịa - Vũng Tàu',
