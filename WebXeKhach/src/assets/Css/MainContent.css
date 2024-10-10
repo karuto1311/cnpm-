@@ -41,8 +41,8 @@
 
 .input-group input:focus,
 .input-group select:focus {
-  border-color: #ff5722; /* Màu border khi focus */
-  outline: none; /* Xóa outline mặc định */
+  border-color: #ff5722;
+  outline: none;
 }
 
 .input-group select {
@@ -55,8 +55,8 @@
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  border-radius: 4px; /* Bo góc cho button */
-  transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu */
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .search-button:hover {
@@ -91,7 +91,7 @@ table td {
 table th {
   background-color: #f5f5f5;
   font-weight: bold;
-  color: #333; /* Màu chữ tiêu đề */
+  color: #333;
 }
 
 table tbody tr:nth-child(odd) {
@@ -105,11 +105,13 @@ table tbody tr:hover {
 .search-results-section {
   margin-top: 40px;
   text-align: center;
+  justify-content: center;
+  display: inline;
 }
 
 .search-results-section h2 {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #333;
 }
 
@@ -119,71 +121,71 @@ table tbody tr:hover {
 }
 
 .popular-routes-section {
-  text-align: center; /* Căn giữa phần tuyến phổ biến */
+  text-align: center;
 }
 
 .popular-routes-section h2 {
   font-size: 24px;
-  margin-bottom: 20px; /* Khoảng cách giữa tiêu đề và ảnh */
+  margin-bottom: 20px;
 }
 
 .popular-routes {
   display: flex;
   margin: 20px 0;
   justify-content: center;
-
 }
 
 .card {
-  position: relative; /* Để có thể sử dụng hình nền */
+  position: relative;
   background-color: #f9f9f9;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 15px;
-  width: 250px; /* Giảm chiều rộng của card để tạo không gian giữa các card */
+  width: 250px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin: 5px; /* Giảm khoảng cách giữa các card */
-  overflow: hidden; /* Ẩn phần thừa */
+  margin: 5px;
+  overflow: hidden;
 }
 
 .card::before {
-  content: ""; /* Để thêm hình nền */
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('../assets/bgimage1.jpg'); /* Hình nền, thay đổi theo card */
+  background-image: url('../assets/bgimage1.jpg');
   background-size: cover;
   background-position: center;
-  filter: brightness(0.6); /* Giảm độ sáng hình nền */
-  z-index: 1; /* Đưa hình nền ra sau */
+  filter: brightness(0.6);
+  z-index: 1;
 }
 
 .card h3,
 .card p {
-  position: relative; /* Để đặt văn bản lên trên hình nền */
-  color: white; /* Màu chữ */
-  z-index: 2; /* Đưa văn bản lên trên hình nền */
+  position: relative;
+  color: white;
+  z-index: 2;
+  font-size: 20px;
 }
 
 .card img {
-  width: 100%; /* Đặt chiều rộng cho ảnh trong card */
-  height: 150px; /* Chiều cao cố định cho ảnh trong card */
-  border-radius: 4px; /* Bo góc cho ảnh */
-  object-fit: cover; /* Đảm bảo ảnh không bị méo */
+  width: 100%;
+  height: 150px;
+  border-radius: 4px;
+  object-fit: cover;
 }
 
 .slideshow-image {
   width: 100%;
-  height: 500px; /* Độ cao cho ảnh slideshow */
-  border-radius: 10px; /* Bo góc cho ảnh slideshow */
-  overflow: hidden; /* Ẩn phần thừa */
+  height: 340px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .slideshow-image img {
-  width: 100%; /* Đặt lại chiều rộng cho hình ảnh */
-  height: 100%; /* Giữ chiều cao */
-  object-fit: cover; /* Đảm bảo hình ảnh được cắt đúng tỉ lệ */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

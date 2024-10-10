@@ -169,13 +169,15 @@ function MainContent() {
 
       <section className="promotion-section">
         <h2>Khuyến mãi nổi bật</h2>
+        <div className='slideshow-image'>
         <Slider {...settings}>
           {images.map((image, index) => (
             <div key={index}>
-              <img src={image} alt={`slide-${index}`} className="slideshow-image" />
+              <img src={image} alt={`slide-${index}`} />
             </div>
           ))}
         </Slider>
+        </div>
       </section>
 
       <section className="popular-routes-section">
