@@ -10,7 +10,7 @@ function Navbar() {
         <li><Link to="/">Trang chủ</Link></li>
         <li><Link to="/schedule">Lịch trình</Link></li>
         <li><a href="/">Tra cứu vé</a></li>
-        <li><a href="/">Hóa đơn</a></li>
+        <li><a href="/">Tin tức</a></li>
         <li><Link to="/contact">Liên hệ</Link></li>
         <li><a href="/about">Về chúng tôi</a></li>
       </ul>
