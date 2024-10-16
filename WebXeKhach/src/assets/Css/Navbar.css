@@ -1,38 +1,29 @@
-/* Navbar Styles */
+/* Định dạng chung cho navbar */
 .navbar {
+  background-color: #ff5722;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 165px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Định dạng cho phần trên của navbar */
+.footer-note {
+  color: #ffffff; /* Màu chữ */
+  margin-right: 20px; /* Khoảng cách giữa dòng chữ và logo */
+  font-size: 14px; /* Kích thước chữ */
+  font-weight: 400; /* Độ đậm chữ */
+  align-self: flex-start; /* Đảm bảo căn trái */
+}
+
+.navbar-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ff5722;
-  padding: 15px 50px;
-  height: 100px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar Left (Menu) */
-.navbar-left {
-  display: flex;
-  list-style-type: none;  /* Removes bullet points */
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-left li {
-  margin-right: 25px;
-}
-
-.navbar-left li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.navbar-left li a:hover {
-  color: #ffd180;
-}
-
-/* Logo */
+/* Logo căn giữa */
 .logo-container {
   display: flex;
   justify-content: center;
@@ -40,28 +31,26 @@
 }
 
 .logo {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: auto;
 }
 
-/* Login/Signup Buttons */
 .loginbtn {
   display: flex;
   align-items: center;
   list-style: none;
+  gap: 15px; 
 }
 
 .loginbtn button {
   background-color: white;
   color: #ff5722;
   border: 1px solid #ff5722;
-  border-radius: 5px;
-  padding: 8px 15px;
+  border-radius: 4px;
+  padding: 8px 16px;
   cursor: pointer;
   font-weight: bold;
-  margin-left: 10px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  list-style: none;
 }
 
 .loginbtn button:hover {
@@ -69,25 +58,51 @@
   color: #ff5722;
 }
 
+/* Định dạng cho phần dưới của navbar (menu điều hướng) */
+.navbar-bottom {
+  display: flex;
+  justify-content: center; /* Căn giữa các mục trong menu điều hướng */
+  list-style-type: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+  gap: 100px; /* Khoảng cách giữa các mục trong menu */
+}
+
+.navbar-bottom li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease; /* Chỉ thay đổi màu chữ khi hover */
+}
+
+.navbar-bottom li a:hover {
+  color: #ffd180; /* Đổi màu chữ khi di chuột vào */
+}
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
+    padding: 15px;
+  }
+
+  .navbar-top {
     flex-direction: column;
-    height: auto;
-    padding: 20px;
   }
 
-  .navbar-left {
-    margin-top: 20px;
-    justify-content: center;
-  }
-
-  .logo {
-    width: 100px;
-    height: 100px;
+  .logo-container {
+    margin-bottom: 10px;
   }
 
   .loginbtn {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navbar-bottom {
+    flex-direction: column;
+    gap: 10px;
     margin-top: 15px;
   }
 }
