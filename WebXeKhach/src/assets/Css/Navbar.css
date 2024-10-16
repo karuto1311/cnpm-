@@ -1,4 +1,3 @@
-/* Định dạng chung cho navbar */
 .navbar {
   background-color: #ff5722;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -8,13 +7,12 @@
   z-index: 1000;
 }
 
-/* Định dạng cho phần trên của navbar */
 .footer-note {
-  color: #ffffff; /* Màu chữ */
-  margin-right: 20px; /* Khoảng cách giữa dòng chữ và logo */
-  font-size: 14px; /* Kích thước chữ */
-  font-weight: 400; /* Độ đậm chữ */
-  align-self: flex-start; /* Đảm bảo căn trái */
+  color: #ffffff; 
+  margin-right: 20px; 
+  font-size: 14px; 
+  font-weight: 400; 
+  align-self: flex-start; 
 }
 
 .navbar-top {
@@ -23,7 +21,6 @@
   align-items: center;
 }
 
-/* Logo căn giữa */
 .logo-container {
   display: flex;
   justify-content: center;
@@ -58,28 +55,25 @@
   color: #ff5722;
 }
 
-/* Định dạng cho phần dưới của navbar (menu điều hướng) */
 .navbar-bottom {
   display: flex;
-  justify-content: center; /* Căn giữa các mục trong menu điều hướng */
+  justify-content: center; 
   list-style-type: none;
   margin: 10px 0 0 0;
   padding: 0;
-  gap: 100px; /* Khoảng cách giữa các mục trong menu */
+  gap: 100px; 
 }
 
 .navbar-bottom li a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease; /* Chỉ thay đổi màu chữ khi hover */
+  transition: color 0.3s ease; 
 }
 
 .navbar-bottom li a:hover {
-  color: #ffd180; /* Đổi màu chữ khi di chuột vào */
+  color: #ffd180; 
 }
-
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
