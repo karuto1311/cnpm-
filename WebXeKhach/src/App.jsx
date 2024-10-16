@@ -9,6 +9,7 @@ import About from './About';
 import Contact from './Contact';
 import Ticket from './Ticket';
 import News from './News';
+import Login from './Login';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/ticket" element={<Ticket/>}/>
           <Route path="/news" element={<News />}/>
+          <Route path="/login" element={<Login />}/>
         </Routes>
       </Router>
     </div>

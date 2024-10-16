@@ -18,8 +18,16 @@ function Navbar() {
         <img src={logo} alt="Xe Dai Nam" className="logo" />
       </div>
       <div className="loginbtn">
-        <button>Đăng Nhập</button>
-        <button>Đăng ký</button>
+      <li>
+          <Link to="/login">
+            <button>Đăng Nhập</button>
+          </Link>
+      </li>
+      <li>
+          <Link to="/">
+            <button>Đăng Ký</button>
+          </Link>
+      </li>
       </div>
     </nav>
   );

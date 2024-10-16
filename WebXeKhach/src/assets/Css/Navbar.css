@@ -1,64 +1,93 @@
-body {
-  font-family: Arial, sans-serif;
-}
-
+/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #ff5722;
-  padding: 10px;
-  color: white;
-  height: 150px;
+  padding: 15px 50px;
+  height: 100px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-margin-right: 150px;
-width: 150px;
-height: 150px;
-}
-
-
-
+/* Navbar Left (Menu) */
 .navbar-left {
   display: flex;
-  list-style: none;
-  margin-top: 50px;
+  list-style-type: none;  /* Removes bullet points */
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-left li {
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .navbar-left li a {
   color: white;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
+.navbar-left li a:hover {
+  color: #ffd180;
+}
+
+/* Logo */
 .logo-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-  width: 150px;
-  height:150px;
+  width: 120px;
+  height: 120px;
 }
 
-
-
+/* Login/Signup Buttons */
 .loginbtn {
-  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  list-style: none;
 }
+
 .loginbtn button {
-  margin-top: 50px;
+  background-color: white;
+  color: #ff5722;
+  border: 1px solid #ff5722;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
   margin-left: 10px;
-  padding: 5px 10px;
-  
-}
-.app-download button {
-  margin: 0 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  list-style: none;
 }
 
+.loginbtn button:hover {
+  background-color: #ffd180;
+  color: #ff5722;
+}
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
 
+  .navbar-left {
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .loginbtn {
+    margin-top: 15px;
+  }
+}
