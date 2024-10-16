@@ -4,20 +4,21 @@ height: fit-content;
 }
 
 .intro.content {
-    margin: 20px 0;
+    margin: 20px;
     text-size-adjust: 15;
+    padding: 10px;
 }
 .body-content {
     display: flex;
     flex-direction: row;
-    height: 500px;
+    height: 300px;
     width: 100%;
-    padding-top: 15px;
+    padding: 30px;
 }
 .body-image {
     height: 300px;
     width: 50%;
-    background-color: gray;
+    
     border-radius: 4px;
 }
 .body-text {
@@ -25,4 +26,5 @@ height: fit-content;
     width: 50%;
     margin: 20px;
     text-align: left;
+    align-content: start;
 }
