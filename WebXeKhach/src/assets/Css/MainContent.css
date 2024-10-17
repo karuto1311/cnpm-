@@ -178,14 +178,15 @@ table tbody tr:hover {
 }
 
 .slideshow-image {
-  width: 100%;
-  height: 340px;
+  width: 80%;
   border-radius: 10px;
   overflow: hidden;
+  display: inline;
+  justify-content: center;
 }
 
 .slideshow-image img {
   width: 100%;
-  height: 100%;
+  height: 450px;
   object-fit: cover;
 }
