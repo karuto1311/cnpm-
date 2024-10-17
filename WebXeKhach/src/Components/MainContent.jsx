@@ -26,7 +26,6 @@ function MainContent() {
     const shuffledData = [...randomTrips].sort(() => 0.5 - Math.random());
     setRandomData(shuffledData.slice(0, Math.floor(Math.random() * 4) + 5));
 
-    // Group popular routes by departure city
     const groupedRoutes = shuffledData.reduce((acc, trip) => {
       if (!acc[trip.departure]) {
         acc[trip.departure] = [];
@@ -35,10 +34,9 @@ function MainContent() {
       return acc;
     }, {});
 
-    // Get only the first three departure cities for popular routes
     const popular = Object.keys(groupedRoutes).slice(0, 3).map(city => ({
       city,
-      trips: groupedRoutes[city].slice(0, 3) // Get the first three trips for each city
+      trips: groupedRoutes[city].slice(0, 3) 
     }));
 
     setPopularRoutes(popular);
@@ -209,6 +207,11 @@ function MainContent() {
           ))}
         </div>
       </section>
+
+      <section className='promotion-ads'>
+        <h2>NHÀ XE NAM HẢI - NHỮNG CHUYẾN ĐI AN TOÀN</h2>
+      </section>
+
     </div>
   );
 }
