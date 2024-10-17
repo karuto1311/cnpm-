@@ -2,8 +2,6 @@
   background-color: #ff5722;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 165px;
-  position: sticky;
-  top: 0;
   z-index: 1000;
 }
 
@@ -25,11 +23,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  width: 200px;
+  height: 150px;
+  border-radius: 8%;
+  padding: 5px;
 }
 
 .logo {
-  width: 100px;
-  height: auto;
+  width: 170px;
+  height: 140px;
 }
 
 .loginbtn {
@@ -59,9 +62,10 @@
   display: flex;
   justify-content: center; 
   list-style-type: none;
-  margin: 10px 0 0 0;
+  margin: 20px 0 10px 0;
   padding: 0;
-  gap: 100px; 
+  gap: 115px; 
+  font-size: 16px;
 }
 
 .navbar-bottom li a {
