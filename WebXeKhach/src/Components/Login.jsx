@@ -3,9 +3,9 @@ import '../assets/Css/Login.css';
 
 function Login() {
     return (
-            <div className="login-content">
+        <div className="login-container"> 
+            <div className="login-box">
                 <h2 className="login-title">ĐĂNG NHẬP</h2>
-                
                 <div className="form-ticket">
                     <form>
                         <div className="form-group">
@@ -21,6 +21,7 @@ function Login() {
                     </form>
                 </div>
             </div>
+        </div>
     );
 }
 

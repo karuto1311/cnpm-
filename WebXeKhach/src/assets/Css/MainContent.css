@@ -56,12 +56,15 @@
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 4px;
+  margin-top: 10px; 
+  margin-bottom: 10px;
   transition: background-color 0.3s ease;
 }
 
 .search-button:hover {
   background-color: #e05a00;
 }
+
 
 .promotion-section,
 .popular-routes-section {

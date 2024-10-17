@@ -113,10 +113,10 @@ function MainContent() {
               value={date} 
               onChange={(e) => setDate(e.target.value)}
               aria-label="Ngày đi"
-            />
+            />        
           </div>
-          <button className="search-button" onClick={handleSearch}>Tìm chuyến xe</button>
         </div>
+        <button className="search-button" onClick={handleSearch}>Tìm chuyến xe</button>
         {error && <div className="error-message">{error}</div>}
       </section>
 
