@@ -22,7 +22,7 @@ function ContactContent() {
           </div>
         </div>
         <div className='form-content'>
-         <h2 style={{color:'#FF0000', textAlign:'left'}}><img src={letter} width={50} height={50}/>  Gửi thông tin cho chúng tôi</h2>
+         <h2 style={{color:'#FF0000', textAlign:'left'}}><img src={letter} width={30} height={25}/>  Gửi thông tin cho chúng tôi</h2>
           <form >
              <fieldset>
                 <input type='text' name='Hoten' placeholder='Họ và tên'/>        
