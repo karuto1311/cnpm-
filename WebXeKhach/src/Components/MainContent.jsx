@@ -227,7 +227,7 @@ function MainContent() {
         <div className='reason'>
         <div className='reason-img'><img src={Store} alt="homeimg"  /></div>
           <h2>Hơn 350 Phòng vé - Bưu cục</h2>
-          <p>Nam Hải phục vụ hơn 20 triệu lượt khách bình quân 1 năm trên toàn quốc</p>
+          <p>Nam Hải có hơn 350 phòng vé, trạm trung chuyển, bến xe,... trên toàn hệ thống</p>
         </div>
 
         <div className='reason'>
