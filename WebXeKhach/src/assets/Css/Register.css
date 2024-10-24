@@ -1,16 +1,16 @@
-.login-container {
+.rg-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f5f5f5;
+  padding: 0 20px;
 }
 
-.login-box {
+.rg-box {
   background-color: white;
   width: 100%;
   max-width: 400px;
-  /*max-height: 500px;*/
   padding: 30px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -18,11 +18,11 @@
   transition: box-shadow 0.3s ease;
 }
 
-.login-box:hover {
+.rg-box:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-.login-title {
+.rg-title {
   font-size: 28px;
   margin-bottom: 20px;
   color: #ff6600;
@@ -30,34 +30,37 @@
   text-transform: uppercase;
 }
 
-/* Các nhóm ô input */
-.form-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.form-group-rg {
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: left;
 }
 
-/* Đưa ô input vào giữa */
+.input-text {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 .input-field {
-  width: 100%; /* Chiều rộng 100% */
+  width: 100%;
   padding: 12px;
   border-radius: 4px;
-  border: 1px solid #ddd; /* Đường viền nhạt */
+  border: 1px solid #ddd;
   font-size: 16px;
   transition: border-color 0.3s ease;
-  /* Bỏ max-width để ô có thể mở rộng theo khung */
-  margin: 0; /* Đảm bảo không có margin xung quanh */
+  box-sizing: border-box;
 }
 
-/* Khi focus vào ô input */
 .input-field:focus {
-  border-color: #ff6600; /* Đổi màu viền khi focus */
-  outline: none; /* Xóa viền mặc định */
+  border-color: #ff6600;
+  outline: none;
 }
 
 .button-ticket {
-  width: 100%; /* Chiếm 100% chiều rộng của phần nhóm */
-  max-width: 325px;
+  width: 100%;
   padding: 12px;
   background-color: #ff6600;
   color: white;
@@ -67,7 +70,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: 600;
-  margin: 20px auto; /* Khoảng cách phía trên nút */
+  margin-top: 20px;
 }
 
 .button-ticket:hover {
@@ -80,6 +83,7 @@
   font-size: 14px;
   text-decoration: none;
   transition: color 0.3s ease;
+  margin-top: 15px;
 }
 
 .forgot-password:hover {
@@ -90,4 +94,6 @@
 body {
   font-family: "Arial", sans-serif;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
 }

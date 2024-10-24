@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../assets/Css/Navbar.css';
-import logo from '../assets/logo.png';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../assets/Css/Navbar.css";
+import logo from "../assets/logo.png";
 
 function Navbar() {
   return (
@@ -20,19 +20,31 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/">
+            <Link to="/register">
               <button>Đăng Ký</button>
             </Link>
           </li>
         </div>
       </div>
       <ul className="navbar-bottom">
-        <li><Link to="/">TRANG CHỦ</Link></li>
-        <li><Link to="/schedule">LỊCH TRÌNH</Link></li>
-        <li><Link to="/ticket">TRA CỨU VÉ</Link></li>
-        <li><Link to="/news">TIN TỨC</Link></li>
-        <li><Link to="/contact">LIÊN HỆ</Link></li>
-        <li><a href="/about">VỀ CHÚNG TÔI</a></li>
+        <li>
+          <Link to="/">TRANG CHỦ</Link>
+        </li>
+        <li>
+          <Link to="/schedule">LỊCH TRÌNH</Link>
+        </li>
+        <li>
+          <Link to="/ticket">TRA CỨU VÉ</Link>
+        </li>
+        <li>
+          <Link to="/news">TIN TỨC</Link>
+        </li>
+        <li>
+          <Link to="/contact">LIÊN HỆ</Link>
+        </li>
+        <li>
+          <a href="/about">VỀ CHÚNG TÔI</a>
+        </li>
       </ul>
     </nav>
   );
