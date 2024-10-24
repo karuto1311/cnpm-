@@ -12,7 +12,7 @@ function Login() {
               <input
                 type="text"
                 className="input-field"
-                placeholder="Tên tài khoản"
+                placeholder="Nhập Email"
               />
             </div>
             <div className="form-group">
@@ -25,9 +25,7 @@ function Login() {
             <div className="form-group">
               <button className="button-ticket">Đăng nhập</button>
             </div>
-            <a href="#" className="forgot-password">
-              Quên mật khẩu?
-            </a>
+            <a href="/forgotpassword" className="forgot-password">Quên mật khẩu?</a>
           </form>
         </div>
       </div>

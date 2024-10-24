@@ -10,7 +10,6 @@
   background-color: white;
   width: 100%;
   max-width: 400px;
-  /*max-height: 500px;*/
   padding: 30px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -37,26 +36,23 @@
   align-items: center;
 }
 
-/* Đưa ô input vào giữa */
 .input-field {
-  width: 100%; /* Chiều rộng 100% */
+  width: 100%; 
   padding: 12px;
   border-radius: 4px;
-  border: 1px solid #ddd; /* Đường viền nhạt */
+  border: 1px solid #ddd; 
   font-size: 16px;
   transition: border-color 0.3s ease;
-  /* Bỏ max-width để ô có thể mở rộng theo khung */
-  margin: 0; /* Đảm bảo không có margin xung quanh */
+  margin: 0; 
 }
 
-/* Khi focus vào ô input */
 .input-field:focus {
-  border-color: #ff6600; /* Đổi màu viền khi focus */
-  outline: none; /* Xóa viền mặc định */
+  border-color: #ff6600; 
+  outline: none; 
 }
 
 .button-ticket {
-  width: 100%; /* Chiếm 100% chiều rộng của phần nhóm */
+  width: 100%; 
   max-width: 325px;
   padding: 12px;
   background-color: #ff6600;
@@ -67,7 +63,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: 600;
-  margin: 20px auto; /* Khoảng cách phía trên nút */
+  margin: 20px auto; 
 }
 
 .button-ticket:hover {
@@ -80,6 +76,7 @@
   font-size: 14px;
   text-decoration: none;
   transition: color 0.3s ease;
+  margin-top: 0px; 
 }
 
 .forgot-password:hover {
