@@ -193,3 +193,22 @@ table tbody tr:hover {
   height: 450px;
   object-fit: cover;
 }
+
+.reason-container{
+  width: 100%;
+}
+.reason-ads{
+  display: inline-flex;
+  width: 50%;
+  gap: 20px;
+}
+.reason h2 {
+  font-size: 21px;
+}
+.reason-img img{
+  width: 120px;
+}
+.reason-homeimg img {
+  width: 620px;
+
+}

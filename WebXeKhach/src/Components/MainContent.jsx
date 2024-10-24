@@ -13,6 +13,13 @@ import bgimage1 from '../assets/bgimage1.jpg';
 import bgimage2 from '../assets/bgimage2.jpg';
 import bgimage3 from '../assets/bgimage3.jpg';
 
+import Group from '../assets/Group.jpg';
+import Group2 from '../assets/Group_2.jpg';
+import Store from '../assets/store.jpg';
+import homeimage from '../assets/homeimage.jpg';
+
+
+
 function MainContent() {
   const [departure, setDeparture] = useState('');
   const [destination, setDestination] = useState('');
@@ -74,7 +81,7 @@ function MainContent() {
 
   return (
     <div className="main-content">
-      <section className="search-section">
+      <div className="search-section">
         <h1>Tìm chuyến xe</h1>
         <div className="search-form">
           <div className="input-group">
@@ -118,9 +125,9 @@ function MainContent() {
         </div>
         <button className="search-button" onClick={handleSearch}>Tìm chuyến xe</button>
         {error && <div className="error-message">{error}</div>}
-      </section>
+      </div>
 
-      <section className="trip-table-section">
+      <div className="trip-table-section">
         <table>
           <thead>
             <tr>
@@ -139,10 +146,10 @@ function MainContent() {
             ))}
           </tbody>
         </table>
-      </section>
+      </div>
 
       {filteredTrips.length > 0 && (
-        <section className="search-results-section">
+        <div className="search-results-section">
           <h2>Kết quả tìm kiếm</h2>
           <table>
             <thead>
@@ -162,10 +169,10 @@ function MainContent() {
               ))}
             </tbody>
           </table>
-        </section>
+        </div>
       )}
 
-      <section className="promotion-section">
+      <div className="promotion-section">
         <h2>Khuyến mãi nổi bật</h2>
         <div className='slideshow-image'>
         <Slider {...settings}>
@@ -176,9 +183,9 @@ function MainContent() {
           ))}
         </Slider>
         </div>
-      </section>
+      </div>
 
-      <section className="popular-routes-section">
+      <div className="popular-routes-section">
         <h2>Tuyến phổ biến</h2>
         <div className="popular-routes">
           {popularRoutes.map((route, index) => (
@@ -206,14 +213,39 @@ function MainContent() {
             </div>
           ))}
         </div>
-      </section>
+      </div>
 
-      <section className='promotion-ads'>
+      <div className='promotion-ads'>
         <h2>NHÀ XE NAM HẢI - NHỮNG CHUYẾN ĐI AN TOÀN</h2>
-      </section>
+          <div className='reason-ads'>
+          <div className='reason'>
+            <div className='reason-img'><img src={Group} alt="homeimg"  /></div>
+          <h2>Hơn 20 Triệu Lượt khách</h2>
+          <p> Nam Hải phục vụ hơn 20 triệu lượt khách bình quân 1 năm trên toàn quốc</p>
+        </div>
 
-    </div>
+        <div className='reason'>
+        <div className='reason-img'><img src={Store} alt="homeimg"  /></div>
+          <h2>Hơn 350 Phòng vé - Bưu cục</h2>
+          <p>Nam Hải phục vụ hơn 20 triệu lượt khách bình quân 1 năm trên toàn quốc</p>
+        </div>
+
+        <div className='reason'>
+        <div className='reason-img'><img src={Group2} alt="homeimg"  /></div>
+          <h2>Hơn 1,000 Chuyến xe</h2>
+          <p>Nam Hải phục vụ hơn 1,000 chuyến xe đường dài và liên tỉnh mỗi ngày</p>
+        </div>
+      
+          </div>
+          <div className='reason-homeimg'><img src={homeimage} alt="homeimg"  /></div>
+
+
+
+
+      </div>
+      </div>
   );
 }
+
 
 export default MainContent;
