@@ -1,10 +1,9 @@
 import React from 'react'
-import bacend from '../backendcomponents/backend'
-
+import backend from '../backendcomponents/backend'
 function be() {
   return (
-    <div>be</div>
-  )
+    <backend />
+)
 }
 
 export default be
