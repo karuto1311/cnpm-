@@ -7,9 +7,10 @@
 }
 .info-content {
     height: auto;
-    width: 40%;
+    width: 30%;
     text-align: center;
-    padding: 10px;
+    padding-left: 40px;
+    margin-right: 20px;
 }
 .info-content-detail{
     text-align: left;
@@ -17,7 +18,7 @@
 }
 .form-content {
     height: auto;
-    width: 60%;
+    width: 70%;
     padding: 10px;
     display: flex;
     flex-direction: column;
