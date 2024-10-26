@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Thêm dòng này để import Link
 import "../assets/Css/ForgotPassword.css";
 
 function ForgotPassword() {
@@ -16,9 +17,11 @@ function ForgotPassword() {
               />
             </div>
             <div className="form-group">
-              <button className="button-ticket">Đổi mật khẩu</button>
+              <Link to="/resetpassword"> 
+                <button type="button" className="button-ticket">Đổi mật khẩu</button>
+              </Link>
             </div>
-            <a href="/login" className="cancel">Hủy</a>
+            <Link to="/login" className="cancel">Hủy</Link>
           </form>
         </div>
       </div>

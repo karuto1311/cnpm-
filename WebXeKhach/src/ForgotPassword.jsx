@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
-function ResetPasswordPage() {
+function ForgotPasswordPage() {
     return (
         <div className="ForgotPassword">
             <Navbar />
@@ -13,4 +13,4 @@ function ResetPasswordPage() {
     );
 }
 
-export default ResetPasswordPage;
+export default ForgotPasswordPage;
