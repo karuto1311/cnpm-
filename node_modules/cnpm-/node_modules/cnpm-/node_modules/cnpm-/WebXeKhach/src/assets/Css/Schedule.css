@@ -1,0 +1,29 @@
+.schedule{
+    height: 385px;
+}
+
+
+.schedule-table {
+    width: 80%;
+    border-collapse: collapse;
+  }
+  
+  .schedule-table th,
+  .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .schedule-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .pagination {
+    margin-top: 10px;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+  }
+  

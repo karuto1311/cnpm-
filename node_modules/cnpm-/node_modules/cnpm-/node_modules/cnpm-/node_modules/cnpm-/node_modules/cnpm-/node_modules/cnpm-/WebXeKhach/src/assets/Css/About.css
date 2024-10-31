@@ -1,0 +1,32 @@
+.About-content {
+padding: 20px 165px;
+height: fit-content;
+
+}
+
+.intro.content {
+    margin: 20px;
+    text-size-adjust: 15;
+    padding: 10px;
+    
+}
+.body-content {
+    display: flex;
+    flex-direction: row;
+    height: 300px;
+    width: 100%;
+    padding: 30px;
+}
+.body-image {
+    height: 300px;
+    width: 50%;
+    
+    border-radius: 4px;
+}
+.body-text {
+    height: 300px;
+    width: 50%;
+    margin: 20px;
+    text-align: left;
+    align-content: start;
+}

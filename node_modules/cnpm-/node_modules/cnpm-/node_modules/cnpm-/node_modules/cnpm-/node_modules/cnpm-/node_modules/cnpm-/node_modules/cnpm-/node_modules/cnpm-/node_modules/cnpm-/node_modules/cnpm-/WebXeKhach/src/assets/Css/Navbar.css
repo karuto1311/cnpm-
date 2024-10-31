@@ -1,0 +1,106 @@
+.navbar {
+  background-color: #ff5722;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 165px;
+  z-index: 1000;
+}
+
+.footer-note {
+  color: #ffffff; 
+  margin-right: 20px; 
+  font-size: 14px; 
+  font-weight: 400; 
+  align-self: flex-start; 
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 200px;
+  height: 150px;
+  border-radius: 8%;
+  padding: 5px;
+}
+
+.logo {
+  width: 170px;
+  height: 140px;
+}
+
+.loginbtn {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 15px; 
+}
+
+.loginbtn button {
+  background-color: white;
+  color: #ff5722;
+  border: 1px solid #ff5722;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.loginbtn button:hover {
+  background-color: #ffd180;
+  color: #ff5722;
+}
+
+.navbar-bottom {
+  display: flex;
+  justify-content: center; 
+  list-style-type: none;
+  margin: 20px 0 10px 0;
+  padding: 0;
+  gap: 115px; 
+  font-size: 16px;
+}
+
+.navbar-bottom li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease; 
+}
+
+.navbar-bottom li a:hover {
+  color: #ffd180; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px;
+  }
+
+  .navbar-top {
+    flex-direction: column;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+
+  .loginbtn {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .navbar-bottom {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+}

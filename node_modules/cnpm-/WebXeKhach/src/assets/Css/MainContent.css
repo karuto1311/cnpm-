@@ -1,0 +1,214 @@
+.main-content {
+  padding: 20px;
+  height: auto;
+}
+
+.search-section {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.input-group input,
+.input-group select {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #ff5722;
+  outline: none;
+}
+
+.input-group select {
+  background-color: white;
+}
+
+.search-button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px; 
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #e05a00;
+}
+
+
+.promotion-section,
+.popular-routes-section {
+  margin-top: 40px;
+}
+
+.trip-table-section,
+.search-results-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  color: #333;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+.search-results-section {
+  margin-top: 40px;
+  text-align: center;
+  justify-content: center;
+  display: inline;
+}
+
+.search-results-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.search-results-section table {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.popular-routes-section {
+  text-align: center;
+}
+
+.popular-routes-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.popular-routes {
+  display: flex;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/bgimage1.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+  z-index: 1;
+}
+
+.card h3,
+.card p {
+  position: relative;
+  color: white;
+  z-index: 2;
+  font-size: 20px;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.slideshow-image {
+  width: 80%;
+  border-radius: 10px;
+  overflow: hidden;
+  display: inline;
+  justify-content: center;
+}
+
+.slideshow-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.reason-container{
+  width: 100%;
+}
+.reason-ads{
+  display: inline-flex;
+  width: 50%;
+  gap: 20px;
+}
+.reason h2 {
+  font-size: 21px;
+}
+.reason-img img{
+  width: 120px;
+}
+.reason-homeimg img {
+  width: 620px;
+
+}
