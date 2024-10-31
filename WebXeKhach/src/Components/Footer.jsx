@@ -10,8 +10,6 @@ function Footer() {
     <footer className="footer">
       <div className="footer-section bus-image">
         <img src={logo} alt="Bus Icon" className="bus-icon" />
-        <p>NHÀ XE NAM HẢI</p>
-        <p>Vì những chuyến xe an toàn cho bạn</p>
       </div>
 
       <div className="footer-section company-info">

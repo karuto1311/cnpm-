@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../assets/Css/Navbar.css";
 import logo from "../assets/logo.png";
+import DropDownUser from "./DropDownUser";
+import Person from "../assets/person.png";
+import "../assets/Css/DropDownUser.css";
+import Arrow from "../assets/downArrow.png"
 
-function Navbar() {
+function NavbarUser () {
+    const [openUser, setOpenUser]=useState(false);
   return (
     <nav className="navbar">
       <div className="navbar-top">
@@ -15,15 +20,14 @@ function Navbar() {
         </div>
         <div className="loginbtn">
           <li>
-            <Link to="/login">
-              <button>Đăng Nhập</button>
-            </Link>
+            <img src={Person}/>
+          </li>
+          <li style={{color:'white', fontWeight:'bold'}}>
+            Bao Nguyen 
           </li>
           <li>
-            <Link to="/register">
-              <button>Đăng Ký</button>
-            </Link>
-          </li>
+            <img src={Arrow} width={25} height={25} onClick={() => setOpenUser((prev)=>!prev)}/>
+          </li>               
         </div>
       </div>
       <ul className="navbar-bottom">
@@ -46,8 +50,12 @@ function Navbar() {
           <a href="/about">VỀ CHÚNG TÔI</a>
         </li>
       </ul>
+      {
+         openUser && <DropDownUser/>
+      }
+      
     </nav>
   );
 }
 
-export default Navbar;
+export default NavbarUser;

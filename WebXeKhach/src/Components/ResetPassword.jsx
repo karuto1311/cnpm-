@@ -1,31 +1,31 @@
 import React from "react";
-import "../assets/Css/Login.css";
+import "../assets/Css/ResetPassword.css";
 
-function Login() {
+function ResetPassword() {
   return (
-    <div className="login-container">
-      <div className="login-box">
-        <h2 className="login-title">ĐĂNG NHẬP</h2>
+    <div className="reset-container">
+      <div className="reset-box">
+        <h2 className="reset-title">QUÊN MẬT KHẨU</h2>
         <div className="form-ticket">
           <form>
             <div className="form-group">
               <input
-                type="text"
+                type="password"
                 className="input-field"
-                placeholder="Nhập Email"
+                placeholder="Nhập mật khẩu"
               />
             </div>
             <div className="form-group">
               <input
                 type="password"
                 className="input-field"
-                placeholder="Mật khẩu"
+                placeholder="Nhập lại mật khẩu"
               />
             </div>
             <div className="form-group">
-              <button className="button-ticket">Đăng nhập</button>
+              <button className="button-ticket">Lưu mật khẩu</button>
             </div>
-            <a href="/forgotpassword" className="forgot-password">Quên mật khẩu?</a>
+            <a href="/login" className="cancel">Hủy</a>
           </form>
         </div>
       </div>
@@ -33,4 +33,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default ResetPassword;
