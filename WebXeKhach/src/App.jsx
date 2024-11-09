@@ -14,7 +14,9 @@ import Register from "./Register";
 import ForgotPassword from "./ForgotPassword";
 import ResetPassword from "./ResetPassword";
 import QlyBen from "./QlyBen";
-import AddNewStation from "./Components/AddNewStation";
+import AddNewStation from "./AddNewStation";
+import BusTicketSelection from "./BusTicketSelection";
+import BusTicketForm from "./BusTicketForm";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -33,6 +35,9 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/resetpassword" element={<ResetPassword />} />
+
+          <Route path="/busticketselection" element={<BusTicketSelection />} />
+          <Route path="/busticketform" element={<BusTicketForm />} />
 
           <Route path="/qlyben" element={<QlyBen />} />
           <Route path="/addnewstation" element={<AddNewStation />} />

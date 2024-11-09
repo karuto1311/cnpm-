@@ -1,0 +1,275 @@
+.bus-ticket-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  color: #e76f51;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.seat-section,
+.trip-info,
+.customer-info,
+.pickup-dropoff {
+  text-align: left;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.trip-info {
+  text-align: left; /* Căn trái toàn bộ nội dung */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.form-containerBusTicketForm {
+  max-width: 600px;
+  /* margin: 0 auto; */
+  /*border: 1px solid #ffa07a;*/
+  /* padding: 20px; */
+  border-radius: 8px;
+}
+
+.trip-info h3,
+.trip-info p,
+.trip-info strong {
+  text-align: left;
+}
+
+.seat-container {
+  display: flex;
+  gap: 20px;
+}
+
+.seat-floor h4 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #555;
+}
+
+.seats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+/*.seat {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}*/
+
+.seat {
+  padding: 10px;
+  border: 1px solid #ddd; /* Đảm bảo border luôn có */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 60px; /* Đặt chiều rộng cố định */
+  height: 40px; /* Đặt chiều cao cố định */
+  box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước */
+  transition: background-color 0.3s, color 0.3s; /* Thêm hiệu ứng mượt mà cho màu sắc */
+}
+
+.seat.selected {
+  background-color: #e76f51;
+  color: #fff;
+}
+
+.seat.available {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.seat.sold {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.seat-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legend.available {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.legend.selected {
+  background-color: #e76f51;
+}
+.legend.sold {
+  background-color: #ccc;
+}
+
+label {
+  display: block;
+  margin-bottom: 20px; /* Thêm khoảng cách giữa các ô */
+  color: #333;
+  font-size: 14px;
+}
+
+input[type="textt"],
+input[type="tel"],
+input[type="email"] {
+  width: 100%; /* Đặt chiều rộng chiếm toàn bộ phần chứa */
+  max-width: 540px; /* Đặt chiều rộng tối đa nếu cần */
+  padding: 12px;
+  border: 1px solid #ff5722;
+  border-radius: 4px;
+  box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+  font-size: 14px;
+}
+
+input[type="checkbox"] {
+  margin-top: 10px;
+}
+
+.submit-button {
+  background-color: #e76f51;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  width: auto; /* Để chiều rộng tự động theo nội dung */
+  padding: 10px 20px; /* Thêm khoảng cách trong nút để cân đối */
+  border-radius: 5px; /* Bo tròn góc cho đẹp */
+}
+
+.submit-button:hover {
+  background-color: #d55f43;
+}
+
+.form-error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Phần thông báo lỗi */
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Thêm kiểu cho form-container, customer-info và terms-info */
+.form-container {
+  display: flex;
+  justify-content: space-between; /* Đảm bảo các phần nằm ngang, cách đều */
+  gap: 20px; /* Khoảng cách giữa hai phần */
+  align-items: flex-start; /* Căn phần trên cùng của hai cột */
+}
+
+.customer-info {
+  flex: 1; /* Chiếm không gian còn lại */
+  padding-right: 20px; /* Đảm bảo không gian cho phần bên phải */
+}
+
+.terms-info {
+  flex: 1;
+}
+
+h3 {
+  color: #e76f51;
+  margin-bottom: 10px;
+}
+
+.terms-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 5px 0;
+  text-align: justify; /* Canh đều hai bên */
+}
+
+.pickup-dropoff {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+.pickup-dropoff h3 {
+  color: #e76f51;
+  margin-bottom: 10px;
+}
+
+.pickup-dropoff-container {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.pickup-section,
+.dropoff-section {
+  flex: 1;
+}
+
+.separator {
+  width: 1px;
+  height: 100%;
+  background-color: #ddd; /* Màu của đường kẻ dọc */
+  margin: 0 15px; /* Khoảng cách giữa đường kẻ và hai phần */
+}
+
+.pickup-section h4,
+.dropoff-section h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.pickup-section label,
+.dropoff-section label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 8px;
+  border: 1px solid #ff5722;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.pickup-dropoff p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+  margin-top: 10px;
+}

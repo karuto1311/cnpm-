@@ -1,0 +1,200 @@
+.bus-ticket-selection {
+  font-family: Arial, sans-serif;
+  color: #333;
+  max-width: 900px;
+  margin: auto;
+}
+
+.header-image img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.search-box {
+  background: #fff;
+  border: 2px solid #ff6600;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.trip-type {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.input-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.input-fields input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ff5722;
+  border-radius: 4px;
+}
+
+.search-button {
+  background: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.clear-filters-button {
+  display: flex;
+  align-items: center; /* Căn giữa nội dung theo chiều dọc */
+  justify-content: center; /* Căn giữa nội dung theo chiều ngang nếu cần */
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 6px 12px; /* Tăng padding để làm nút lớn hơn */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  gap: 6px; /* Khoảng cách giữa icon và text */
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.clear-filters-button:hover {
+  background-color: #e0e0e0;
+  border-color: #aaa;
+}
+
+.icontrash {
+  width: 18px; /* Điều chỉnh kích thước icon nhỏ hơn */
+  height: 18px;
+  color: #666;
+}
+
+.filter-and-results {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.filter-box {
+  text-align: left;
+  flex: 1;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.filter-box h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.filter-options {
+  padding: 16px;
+}
+
+.filter-options .filter-group:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.filter-group {
+  margin-bottom: 15px;
+}
+
+.filter-group label {
+  /*font-weight: bold;*/
+  display: block;
+  margin-bottom: 5px;
+}
+
+.results {
+  flex: 2;
+}
+
+.results h4 {
+  text-align: left;
+}
+
+.sort-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.sort-options button {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.trip {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.trip-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.trip-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0; /* Added space between the rows */
+}
+
+.trip-label {
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.trip-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0; /* Adjusted the space above and below the divider */
+}
+
+.trip-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.trip-price {
+  font-size: 16px;
+  color: #ff6600;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.select-trip-button {
+  background: #ff6600;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
