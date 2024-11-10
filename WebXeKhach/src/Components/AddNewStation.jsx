@@ -16,7 +16,7 @@ function AddNewStation() {
       <h1>QUẢN LÝ BẾN XE</h1>
       <p>Quản lý các bến xe của nhà xe Nam Hải</p>
 
-      <div className="form-container">
+      <div className="form-containerAddNewStation">
         <div className="form-header">
           <h2>THÊM MỚI BẾN XE</h2>
           <Link to="/qlyben">

@@ -15,7 +15,7 @@
   margin-bottom: 20px;
 }
 
-.form-container {
+.form-containerAddNewStation {
   max-width: 500px;
   margin: 0 auto;
   border: 1px solid #ffa07a;
@@ -71,16 +71,14 @@
 }
 
 .save-button {
-  width: 100%;
   background-color: #ff5722;
-  color: white;
-  padding: 10px;
+  color: #fff;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
   font-size: 16px;
-  margin-top: 20px;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  width: auto; /* Để chiều rộng tự động theo nội dung */
+  padding: 10px 20px; /* Thêm khoảng cách trong nút để cân đối */
+  border-radius: 5px; /* Bo tròn góc cho đẹp */
 }
 
 .save-button:hover {
